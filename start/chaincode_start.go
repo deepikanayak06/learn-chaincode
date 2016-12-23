@@ -102,7 +102,7 @@ func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function strin
 	if function != "query" {
 		return nil, errors.New("Invalid query function name. Expecting \"query\"")
 	}
-	var key, jsonResp string
+	var key string
     var err error
 
 	if len(args) != 1 {
